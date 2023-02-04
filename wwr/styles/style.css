@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Indie+Flower&display=swap');
+
+:root {
+    --heading-Handwritten: "Indie Flower", Brush Script MT, cursive;
+    --heading-Stencil: "Black Ops One", Tahoma, sans-serif;
+    --paragraph-font: Ariel, Helvetica, sans-serif;
+}
+
 a {
     text-decoration: none;
+    
 }
 
 #content {
@@ -14,7 +23,11 @@ a {
 
 .book, .join {
     background-color: rgb(215, 224, 250);
+    border-radius: 5px;
     color: #134611;
+    font-size: 18px;
+    margin-top: 50px;
+    padding: 15px 30px;
     text-decoration: none;
 }
 
@@ -26,17 +39,34 @@ a {
 body {
     background-color: antiquewhite;
     color: black;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 .button-box {
     text-align: center;
 }
 
+/* Cards */
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+
+footer {
+    padding: 25px 50px;
+    margin-top: 200px;
+    font-size: .5em;
+}
+
 footer p {
     font-size: 1.2em;
     text-decoration: none;
 }
-
 
 footer a {
     color: black;
@@ -49,15 +79,28 @@ footer a:hover {
     color: white;
 }
 
+footer .social img {
+    padding-top: 15px;
+}
+
+h1 {
+    font-family: var(--heading-Stencil);
+}
+
+h2 {
+    font-family: var(--heading-Stencil);
+    margin: 0;
+}
+
 h4 {
     color: #3E8914;
+    font-family: var(--heading-Handwritten);
 }
 
 header, footer {
     background-color: #0ACDFF;
     color: black;
 }
-
 
 #hero-img {
     width: 100%;
@@ -67,33 +110,37 @@ header, footer {
     text-align: center;
 }
 
+.home-title {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 
 .logo {
     width: 80px;
 }
 
-
-nav a {
-    text-align: center;
-    color: black;
-    text-decoration: none;
+#logo_link {
+    padding-top: 5px;
 }
-
-nav a:hover {
-    background-color: #134611;
-    color: white;
-}
-
 
 main section {
     text-align: center;
 }
 
+main section img {
+    text-align: center;
+    box-sizing: border-box;
+}
+
 .msg {
     background-color: antiquewhite;
+    line-height: 1.5em;
+    padding: 35px;
 }
 
 .msg h2 {
@@ -102,4 +149,27 @@ main section {
 
 .msg p {
     color: black;
+    font-size: .8em;
+    padding-bottom: 15px;
+}
+
+nav a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-family: var(--heading-Handwritten);
+    padding: 35px;
+}
+
+nav a:hover {
+    background-color: #134611;
+    color: white;
+}
+
+.p-cursive {
+    font-family: var(--heading-Handwritten);
+}
+
+p {
+    font-family: var(--paragraph-font);
 }
