@@ -1,0 +1,9 @@
+I would like to present a "portfolio" of three different web pages:
+
+A cooking / baking recipe webpage
+This would show my ability to make easy to digest pages for the masses
+A technical information page for my hobby: lockpicking
+Showing how to present a higher volume of more technical information in a neat and easy to access way
+A company webpage as if I had a company
+This used to demonstrate my ability to create marketable pages for companies
+These would be united through a single "home" page that would allow the user to pick which of the three sample pages they would like to view.
