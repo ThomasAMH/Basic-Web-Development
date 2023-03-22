@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>Site Plan</title>
-        <link type="text/css" rel="stylesheet" href="styles/site-plan.css">
+        <link type="text/css" rel="stylesheet" href="styles/consumer_site.css">
     </head>
 
     <body>
@@ -17,13 +17,56 @@
         </header>
 
         <main>
+            <!--Container for image gallery-->
+            <div class="imageGallery">
+                <!-- Full width images and text -->
+                <div class="imageSlide">
+                    <div class="numberText">1/2</div>
+                    <img src="./images/Pancakes1.jpg" alt="Excellent served with with maple syrup and butter">
+                </div>
+                <div class="imageSlide">
+                    <div class="numberText">2/3</div>
+                    <img src="./images/Pancakes2.jpg" alt="A breakfast staple!">
+                </div>
+                <div class="imageSlide">
+                    <div class="numberText">2/3</div>
+                    <img src="./images/Pancakes3.jpg" alt="A great foundation. Go wild!">
+                </div>
+                
+                
+                <!--Next and previous buttons-->
+                <div class="image-buttons">
+                    <a class="prev-button" onclick="plusSlides(-1)">&#10094</a>
+                    <a class="next-button" onclick="plusSlides(1)">&#10095</a>
+                </div>
+                
+                <!-- Image Text-->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail Images-->
+                <div class="imageGalleryRow">
+                    <div class="imageGalleryColumn">
+                        <img class="demo cursor" src="./images/Pancakes1.jpg" alt="Excellent served with with maple syrup and butter" width="100%">
+                    </div>
+                    <div class="imageGalleryColumn">
+                        <img class="demo cursor" src="./images/Pancakes2.jpg" alt="A breakfast staple!" width="100%">
+                    </div>
+                    <div class="imageGalleryColumn">
+                        <img class="demo cursor" src="./images/Pancakes3.jpg" alt="A great foundation. Go wild!" width="100%">
+                    </div>
+                </div>
+            </div>
+
             <section class="Intro">
-                <h1>Delicious Pancakes</h1>
+                <h1>Aunt C's <em>Delicious</em> Pancakes</h1>
                 <p>Saturday mornings were always pancake days growing up. This recipe for fluffy pancakes has served my family for many years, and I know you’ll love it too!</p>
-                <em>-Calanthe M.</em>
+                <p><em>-Calanthe M.</em></p>
             </section>
             <section class="Ingredients">
-                <h2>Ingredients for 8x 12-cm Wide Pancakes</h2>
+                <h2>Ingredients for 8x12-cm Wide Pancakes</h2>
+                <hr>
                 <ul>
                     <li>3 ½ teaspoons baking powder</li>
                     <li>1 tablespoon white sugar</li>
@@ -57,16 +100,47 @@
                         <li>Freeze cooked pancakes: Allow the pancakes to cool completely, then arrange them in a single layer on a baking sheet (make sure the edges aren't touching). Flash freeze for a few hours or up to overnight. Reheat in an oven set to 350 degrees F until warmed through.</li>
                         <li>To freeze pancake batter: Ladle the pancake batter in serving size portions into freezer bags, then wrap the bags in foil. Freeze flat for up to one month. Thaw in the refrigerator overnight.</li>
                     </ul>
+                    <em>The above content is copied from <a href="https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/">allrecipies.com</a>. Additional formatting has been applied.</em>
                 </div>
 
             </section>
-            <em>The above content is copied from <a href="https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/">allrecipies.com</a>. Additional formatting has been applied.</em>
         </main>
         
         <footer>
-            <p>TAM Software Engineering Corp. &copy;2023</p>
-            <em>The Sky's The Limit!</em>
+            <p>TAM Software Engineering Corp. &copy;2023 | <em>The Sky's The Limit!</em></p>            
         </footer>
     </body>
-
 </html>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("imageSlide");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
