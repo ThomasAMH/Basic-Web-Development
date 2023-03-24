@@ -67,7 +67,7 @@ nav a{
 }
 
 html {
-    background-image: url("/Resume_Site/images/consumer_background.jpg");
+    background-image: url("./Resume_Site/images/consumer_background.jpg");
 }
 
 .image-buttons {
