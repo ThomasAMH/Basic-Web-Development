@@ -1,0 +1,39 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
+body img {
+    width: 400px;
+}
+
+footer {
+    text-align: center;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+header, footer {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.images {
+    text-align: center;
+    flex-direction: row;
+}
+
+.images img {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+}
+nav {
+    text-align: center;
+}
+
+nav a {
+    margin: 5%;
+}
