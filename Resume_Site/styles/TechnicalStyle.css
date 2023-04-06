@@ -18,6 +18,7 @@ h4 {
 header, footer {
     border-style: solid;
     border-width: 1px;
+    background-color: lightgray;
 }
 
 .images {
